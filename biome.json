@@ -1,113 +1,123 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
-  "vcs": {
-    "enabled": true,
-    "clientKind": "git",
-    "useIgnoreFile": true
-  },
-  "organizeImports": {
-    "enabled": true
-  },
-  "linter": {
-    "enabled": true,
-    "ignore": [
-      "package.json",
-      "package-lock.json",
-      "node_modules",
-      "dist",
-      "./dist",
-      "./dist/**",
-      "./dist/**/*",
-      "build",
-      "coverage",
-      "public"
-    ],
-    "rules": {
-      "recommended": true,
-      "a11y": {
-        "useMediaCaption": {
-          "level": "off"
-        },
-        "noAccessKey": "error",
-        "noAriaHiddenOnFocusable": "error",
-        "noAriaUnsupportedElements": "warn",
-        "noAutofocus": "error",
-        "noBlankTarget": "error"
-      },
-      "suspicious": {
-        "useValidTypeof": {
-          "level": "error"
-        },
-        "noImplicitAnyLet": "error"
-      },
-      "correctness": {
-        "noUndeclaredDependencies": "error",
-        "noChildrenProp": "error",
-        "noUnusedImports": "error",
-        "useExhaustiveDependencies": "off",
-        "noUndeclaredVariables": {
-          "level": "error"
-        },
-        "noUnusedVariables": {
-          "level": "warn",
-          "fix": "none"
-        }
-      },
-      "style": {
-        "useConst": {
-          "level": "warn",
-          "fix": "unsafe"
-        },
-        "useTemplate": {
-          "level": "warn",
-          "fix": "safe"
-        }
-      }
-    }
-  },
-  "formatter": {
-    "enabled": true,
-    "formatWithErrors": false,
-    "ignore": [
-      "package.json",
-      "package-lock.json",
-      "node_modules",
-      "dist",
-      "./dist",
-      "./dist/**",
-      "./dist/**/*",
-      "build",
-      "coverage",
-      "public"
-    ],
-    "attributePosition": "auto",
-    "indentStyle": "tab",
-    "indentWidth": 2,
-    "lineWidth": 80,
-    "lineEnding": "lf"
-  },
-  "javascript": {
-    "jsxRuntime": "transparent",
-    "formatter": {
-      "arrowParentheses": "always",
-      "bracketSameLine": true,
-      "bracketSpacing": true,
-      "jsxQuoteStyle": "single",
-      "quoteProperties": "asNeeded",
-      "semicolons": "asNeeded",
-      "trailingCommas": "none",
-      "quoteStyle": "single",
-      "attributePosition": "multiline"
-    }
-  },
-  "json": {
-    "formatter": {
-      "enabled": true,
-      "trailingCommas": "none"
-    },
-    "linter": {
-      "enabled": true
-    }
-  },
-  "overrides": []
+	"$schema": "https://biomejs.dev/schemas/2.0.4/schema.json",
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true
+	},
+	"files": {
+		"ignoreUnknown": false
+	},
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "tab",
+		"formatWithErrors": false,
+		"attributePosition": "auto",
+		"indentWidth": 2,
+		"lineWidth": 80,
+		"lineEnding": "lf"
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"correctness": {
+				"noUndeclaredDependencies": "error",
+				"noChildrenProp": "error",
+				"noUnusedImports": "error",
+				"noUnusedLabels": "error",
+				"useExhaustiveDependencies": "off",
+				"noUndeclaredVariables": "error",
+				"noUnusedVariables": "warn",
+				"useHookAtTopLevel": "info"
+			},
+			"a11y": {
+				"noLabelWithoutControl": "warn",
+				"noRedundantAlt": "warn",
+				"noStaticElementInteractions": "warn",
+				"noSvgWithoutTitle": "warn",
+				"useAltText": "warn",
+				"useAriaPropsForRole": "warn",
+				"useButtonType": "warn"
+			},
+			"nursery": {
+				"noConstantBinaryExpression": "warn",
+				"noImportCycles": "error",
+				"noNestedComponentDefinitions": "error",
+				"noNoninteractiveElementInteractions": "warn",
+				"noProcessGlobal": "info",
+				"noReactPropAssign": "error",
+				"noShadow": "warn",
+				"useExplicitType": "error",
+				"noUnresolvedImports": "error",
+				"noUselessUndefined": "error",
+				"useExportsLast": "warn",
+				"useConsistentResponse": "error",
+				"useJsonImportAttribute": "error"
+			},
+			"style": {
+				"noImplicitBoolean": "error",
+				"noNegationElse": "error",
+				"noParameterAssign": "error",
+				"noParameterProperties": "error",
+				"noUnusedTemplateLiteral": "error",
+				"noUselessElse": "warn",
+				"useThrowOnlyError": "error",
+				"useThrowNewError": "error",
+				"useShorthandAssign": "error",
+				"useSelfClosingElements": "error",
+				"useNodejsImportProtocol": "error",
+				"useNamingConvention": "error",
+				"useFragmentSyntax": "warn",
+				"useForOf": "error",
+				"useFilenamingConvention": "off",
+				"useExportType": "error",
+				"useExplicitLengthCheck": "error",
+				"useConst": "error",
+				"useConsistentCurlyBraces": "error",
+				"useCollapsedIf": "error",
+				"useBlockStatements": "error",
+				"useAsConstAssertion": "error",
+				"useArrayLiterals": "error"
+			},
+			"suspicious": {
+				"noEmptyBlockStatements": "error",
+				"useAwait": "error"
+			},
+			"performance": {
+				"noDelete": "error"
+			}
+		}
+	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "single",
+			"trailingCommas": "none",
+			"arrowParentheses": "always",
+			"bracketSameLine": true,
+			"bracketSpacing": true,
+			"jsxQuoteStyle": "single",
+			"quoteProperties": "asNeeded",
+			"semicolons": "asNeeded",
+			"attributePosition": "auto"
+		}
+	},
+	"assist": {
+		"enabled": true,
+		"actions": {
+			"source": {
+				"organizeImports": "on",
+				"useSortedAttributes": "on"
+			}
+		}
+	},
+	"json": {
+		"formatter": {
+			"enabled": true,
+			"trailingCommas": "none"
+		},
+		"linter": {
+			"enabled": true
+		}
+	}
 }
