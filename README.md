@@ -31,6 +31,7 @@ Descargá el ejecutable de Biome desde su repositorio oficial:
 ### 3. 📁 biome.json en tu proyecto
 
 Asegurate de tener un archivo `biome.json` en la raíz del proyecto. Podés copiarlo o reemplazarlo con uno actualizado según tu configuración preferida.
+o inicializa biome: npx @biomejs/biome init
 
 ---
 
